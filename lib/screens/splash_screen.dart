@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:xrom_app/controllers/splash_controller.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class SplashScreen extends StatelessWidget {
  
 final SplashController splashController = Get.put(SplashController());
   @override
   Widget build(BuildContext context) {
+     _checkToken();
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -44,5 +46,20 @@ final SplashController splashController = Get.put(SplashController());
         ),
       ),
     );
+  }
+   void _checkToken() async {
+    final storage = GetStorage();
+
+    // Simula un retraso para mostrar la splash screen (puedes quitar este delay en producción)
+    await Future.delayed(Duration(seconds: 2));
+
+    // Verifica si hay un token guardado
+    if (storage.hasData('access_token')) {
+      // Redirige al HomeScreen si hay un token
+      Get.offAllNamed('/home');
+    } else {
+      // Redirige al LoginScreen si no hay un token
+      Get.offAllNamed('/login');
+    }
   }
 }

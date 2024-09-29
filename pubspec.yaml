@@ -49,6 +49,8 @@ dev_dependencies:
   get: ^4.6.6
   get_storage: ^2.1.1
   google_fonts: ^6.2.1
+  flutter_rating_bar: ^4.0.0
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -63,8 +65,20 @@ flutter:
   assets:
     - assets/logo-xrom.jpg
     - assets/google_logo.png
-    
+    - assets/logo_principal.png
+    - assets/offer_1.jpg
+    - assets/offer_2.jpg
+    - assets/offer_3.jpg
+    - assets/offer_4.jpg
+    - assets/offer_5.jpg
+    - assets/product_1.jpg
+    - assets/product_2.jpg
+    - assets/product_3.jpg
+    - assets/product_4.jpg
+    - assets/product_5.jpg
+    - assets/maintenance.png
     - assets/logo_login.png
+    - assets/profile_image.jpeg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
