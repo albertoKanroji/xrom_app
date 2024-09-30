@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/splash', // Ruta inicial
+      initialRoute: '/home', // Ruta inicial
       getPages: [
         GetPage(name: '/splash', page: () => SplashScreen()),
         GetPage(name: '/login', page: () => LoginScreen()),
